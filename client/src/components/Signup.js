@@ -54,8 +54,10 @@ export default class Signup extends Component {
             value={this.state.password}
             onChange={this.handleChange}
           />
+
           <button type="submit">Sign Up</button>
           {this.state.message && <h3>{this.state.message}</h3>}
+
         </form>
       </div>
     );

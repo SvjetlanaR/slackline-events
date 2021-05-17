@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { login } from "../services/auth";
+import { Link } from "react-router-dom";
 
 export default class Login extends Component {
   state = {
@@ -57,6 +58,9 @@ export default class Login extends Component {
           />
           <button type="submit">Log in</button>
           {this.state.message && <h3>{this.state.message}</h3>}
+          <div>
+          <button><Link to="/signup">Sign Up</Link></button>
+          </div>
         </form>
       </div>
     );

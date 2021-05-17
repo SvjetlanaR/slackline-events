@@ -1,11 +1,14 @@
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Events from "./components/Events";
-import Navbar from "./components/Navbar";
+import HomePage from "./components/HomePage";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-import ProtectedRoute from "./components/ProtectedRoute";
 import React from "react";
+import AddEvent from "./components/AddEvent";
+import EventDetails from "./components/EventDetails";
+import TreeProtection from "./components/TreeProtection";
+import UserPage from "./components/UserPage";
 
 class App extends React.Component {
   state = {
@@ -18,15 +21,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <h2>Slackline Events</h2>
-        <h4>Don't forget the Tree Protector!</h4>
-        <Navbar user={this.state.user} setUser={this.setUser} />
-        <ProtectedRoute
+      <div>
+        <Switch>
+
+        <Route exact path='/' component={HomePage} />
+        <Route
+          exact
           path="/events"
-          user={this.state.user}
-          component={Events}
-          redirectPath="/login"
+          render={(props) => <Events setUser={this.setUser} {...props} />}
+        />
+         <Route
+          exact
+          path="/tree-protection"
+          render={(props) => <TreeProtection setUser={this.setUser} {...props} />}
         />
         <Route
           exact
@@ -34,10 +41,27 @@ class App extends React.Component {
           render={(props) => <Signup setUser={this.setUser} {...props} />}
         />
         <Route
-          exact
+          exact 
           path="/login"
           render={(props) => <Login setUser={this.setUser} {...props} />}
         />
+        <Route
+          exact
+          path="/add-event"
+          render={(props) => <AddEvent setUser={this.setUser} {...props} />}
+        />
+        <Route
+          exact
+          path="/user-page"
+          render={(props) => <UserPage setUser={this.setUser} {...props} />}
+        />
+        
+        <Route
+          exact
+          path="/events/:id"
+          render={(props) => <EventDetails setUser={this.setUser} {...props} loggedInUser={this.state.user}/>}
+        />
+        </Switch>
       </div>
     );
   }
