@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import EventList from "./EventList";
 import { Link } from 'react-router-dom';
-import AddEvent from "./AddEvent";
+// import AddEvent from "./AddEvent";
+import { logout } from '../services/auth';
 
 export default class Events extends Component {
   state = {
@@ -24,6 +25,12 @@ export default class Events extends Component {
   componentDidMount() {
     this.getData();
   }
+  handleLogout = () => {
+    logout().then(() => {
+      this.props.setUser(null);
+    });
+  };
+
 
   render() {
     return (
@@ -38,10 +45,15 @@ export default class Events extends Component {
         </div>
         <div>
         <h4>All Events:</h4>
+        
         <EventList events={this.state.events} />
+
         </div>
         <div>
         <Link to="/tree-protection">important! Tree Protection</Link>
+        </div>
+        <div>
+        <Link to='/' onClick={this.handleLogout}>Log Out</Link>
         </div>
       </div>
     );

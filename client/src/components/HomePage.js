@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import TreeProtection from "./TreeProtection";
 
 export default function Navbar(props) {
   return (

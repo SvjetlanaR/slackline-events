@@ -53,7 +53,7 @@ class App extends React.Component {
         <Route
           exact
           path="/user-page"
-          render={(props) => <UserPage setUser={this.setUser} {...props} />}
+          render={(props) => <UserPage setUser={this.setUser} {...props} join={this.state.join} loggedInUser={this.state.user}/>}
         />
         
         <Route
