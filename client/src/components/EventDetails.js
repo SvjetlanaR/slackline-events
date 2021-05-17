@@ -86,6 +86,7 @@ join = () => {
   this.setState ({
     join: !this.state.join
 })
+console.log(this.state.join)
 }
 
   render() {

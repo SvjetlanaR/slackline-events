@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { logout } from '../services/auth';
 import axios from "axios";
 import EventList from "./EventList";
+import EventDetails from "./EventDetails";
 
 export default class UserPage extends Component {
   state = {
     events: [],
-    user: this.props.loggedInUser
+    user: this.props.loggedInUser,
+    myJoin: this.props.join
   }
 
   getData = () => {
@@ -19,9 +21,13 @@ export default class UserPage extends Component {
         console.log(user);
         
         const filterEvents = response.data.filter(function(event) {
-          console.log(event)
-          return (event.creator == user._id) 
+          console.log(event);
+          // return (event.creator == user._id) 
+          console.log(EventDetails.state.join);
+          return ((event.creator === user.id) || EventDetails.state.join)
+       
        })
+     
 
         this.setState({
           events: filterEvents

@@ -4,6 +4,7 @@ import EventList from "./EventList";
 import { Link } from 'react-router-dom';
 // import AddEvent from "./AddEvent";
 import { logout } from '../services/auth';
+import ReactPlayer from 'react-player';
 
 export default class Events extends Component {
   state = {
@@ -52,7 +53,27 @@ export default class Events extends Component {
         <div>
         <Link to="/tree-protection">important! Tree Protection</Link>
         </div>
+       
         <div>
+      <ReactPlayer
+          url="https://www.youtube.com/watch?v=obyxQ2FAAbY&t=102s"
+          controls
+          width= "400px"
+          height= "200px"
+        />
+      </div>
+
+      <hr/>
+      <div>
+      <ReactPlayer
+          url="https://www.youtube.com/watch?v=BqyXmB-4sxQ"
+          controls
+          width= "400px"
+          height= "200px"
+        />
+      </div>
+
+      <div>
         <Link to='/' onClick={this.handleLogout}>Log Out</Link>
         </div>
       </div>

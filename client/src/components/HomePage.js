@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 export default function Navbar(props) {
   return (
     <div className="homepage">
@@ -14,6 +15,7 @@ export default function Navbar(props) {
       <div>
         <Link to="/login">Login</Link>
       </div>
+     
     </div>
   );
 }
