@@ -22,9 +22,9 @@ export default class UserPage extends Component {
         
         const filterEvents = response.data.filter(function(event) {
           console.log(event);
-          // return (event.creator == user._id) 
+          return (event.creator == user._id) 
           console.log(EventDetails.state.join);
-          return ((event.creator === user.id) || EventDetails.state.join)
+          // return ((event.creator === user.id) || EventDetails.state.join)
        
        })
      
