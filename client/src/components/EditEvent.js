@@ -38,6 +38,7 @@ export default class EditEvent extends Component {
             value={this.props.time}
             onChange={this.props.handleChange}
           />
+          
           <button type="submit">Update</button>
         </form>
       </div>
