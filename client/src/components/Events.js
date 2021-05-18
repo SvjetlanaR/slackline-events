@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import EventList from "./EventList";
 import { Link } from 'react-router-dom';
-// import AddEvent from "./AddEvent";
 import { logout } from '../services/auth';
 import ReactPlayer from 'react-player';
 
