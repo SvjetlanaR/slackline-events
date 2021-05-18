@@ -45,7 +45,7 @@ export default class AddEvent extends Component {
           userEmail: ""
         });
         this.props.history.push('/events');
-        // this.props.getData();
+        
       });
   };
   handleChange = (e) => {
@@ -67,6 +67,7 @@ export default class AddEvent extends Component {
           value={this.state.title}
           onChange={this.handleChange}
         />
+        <br />
          <label htmlFor="date">Date: </label>
         <input
           type="text"
@@ -75,6 +76,7 @@ export default class AddEvent extends Component {
           value={this.state.date}
           onChange={this.handleChange}
         />
+        <br />
          <label htmlFor="time">Time: </label>
         <input
           type="text"
@@ -83,6 +85,7 @@ export default class AddEvent extends Component {
           value={this.state.time}
           onChange={this.handleChange}
         />
+        <br />
         <label htmlFor="description">Description: </label>
         <input
           type="text"
@@ -91,6 +94,7 @@ export default class AddEvent extends Component {
           value={this.state.description}
           onChange={this.handleChange}
         />
+        <br />
         <label htmlFor="eqiupment">Eguipment: </label>
         <input
           type="text"
@@ -99,7 +103,7 @@ export default class AddEvent extends Component {
           value={this.state.equipment}
           onChange={this.handleChange}
         />
-       
+       <br />
         <label htmlFor="duration">Duration: </label>
         <input
           type="text"
@@ -108,6 +112,7 @@ export default class AddEvent extends Component {
           value={this.state.duration}
           onChange={this.handleChange}
         />
+        <br />
         <label htmlFor="location">Location: </label>
         <input
           type="text"
@@ -116,6 +121,7 @@ export default class AddEvent extends Component {
           value={this.state.location}
           onChange={this.handleChange}
         />
+        <br />
         <label htmlFor="counter">Counter: </label>
         <input
           type="text"
@@ -124,6 +130,7 @@ export default class AddEvent extends Component {
           value={this.state.counter}
           onChange={this.handleChange}
         />
+        <br />
        <label htmlFor="userEmail">Contact Email: </label>
         <input
           type="text"
@@ -132,9 +139,10 @@ export default class AddEvent extends Component {
           value={this.state.userEmail}
           onChange={this.handleChange}
         />
-     
+     <br />
           <button type="submit">Create this project</button>
         </form>
+
       </div>
     );
   }

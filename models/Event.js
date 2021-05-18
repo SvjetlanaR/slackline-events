@@ -10,7 +10,9 @@ const eventSchema = new Schema({
   duration: String,
   location: String,
   counter: Number,
-  userEmail: String
+  userEmail: String,
+  // join: { type: Boolean, default: false}
+  // join: Number
 });
 
 const Event = mongoose.model('Event', eventSchema);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import TreeProtection from "./TreeProtection";
+
 
 export default function Navbar(props) {
   return (
@@ -15,6 +15,7 @@ export default function Navbar(props) {
       <div>
         <Link to="/login">Login</Link>
       </div>
+     
     </div>
   );
 }
