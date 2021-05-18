@@ -1,7 +1,7 @@
-<div>
+/* <div>
       <h2>Welcome to the Slackline Community</h2>
         {/* <AddEvent getData={this.getData} /> */}
-        <div>
+        /* <div>
         <Link to="/user-page">My Events</Link>
         </div>
         <div>
@@ -14,7 +14,7 @@
         <div>
         <Link to="/tree-protection">important! Tree Protection</Link>
         </div>
-      </div>
+      </div> */
 
 
 h2 {
@@ -22,9 +22,9 @@ h2 {
 }
 
 #eventsLink {
-
+  font-weight: bold;
 }
 
 #addEventLink {
-
+  font-weight: bold;
 }
