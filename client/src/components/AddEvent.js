@@ -45,7 +45,7 @@ export default class AddEvent extends Component {
           userEmail: ""
         });
         this.props.history.push('/events');
-        // this.props.getData();
+        
       });
   };
   handleChange = (e) => {
@@ -142,6 +142,7 @@ export default class AddEvent extends Component {
      <br />
           <button type="submit">Create this project</button>
         </form>
+
       </div>
     );
   }

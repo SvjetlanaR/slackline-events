@@ -9,10 +9,9 @@ export default class TreeProtection extends Component {
         <h1>Tree Protection </h1>
 
         For more information visit 
-        <a href="https://www.slacklineinternational.org/tree-protection/">SlacklineInternational Tree Protection</a>
-        <br/>
-
-
+        <br />
+        <a href = "https://www.slacklineinternational.org/tree-protection/" target = "_blank" 
+rel = "noopener noreferrer">SlacklineInternational Tree Protection</a>
         <div>
       <ReactPlayer
           url="https://www.youtube.com/watch?v=uKGTJZeQvxY"

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import EditEvent from './EditEvent';
+import { Link } from "react-router-dom";
 
 
 export default class EventDetails extends Component {
@@ -31,7 +32,8 @@ getData = () => {
         title: response.data.title,
         description: response.data.description,
         date: response.data.title,
-        time: response.data.time
+        time: response.data.time,
+        join: response.data.join
       })
     })
     .catch(err => {
@@ -78,15 +80,15 @@ handleSubmit = e => {
     .catch(err => console.log(err));
 }
 
-componentDidMount() {
-  this.getData();
-}
-
 join = () => {
   this.setState ({
     join: !this.state.join
 })
 console.log(this.state.join)
+}
+
+componentDidMount() {
+  this.getData();
 }
 
   render() {
@@ -105,7 +107,7 @@ console.log(this.state.join)
         <p>Duration: {this.state.event.duration }</p>
         <p>Counter: {this.state.event.counter}</p>
         <p>Contact email: {this.state.event.userEmail}</p>
-        
+        {  }
         <button onClick={this.join}>{this.state.join ? 'joined' : 'join'}</button>
 
         {this.props.loggedInUser._id === this.state.event.creator && (<button onClick={this.deleteEvent}>Delete</button>)}
@@ -116,7 +118,9 @@ console.log(this.state.join)
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
           /> )}
-
+ <div>
+        <Link to="/events">Home Page</Link>
+        </div>
       </div>
     )
   }

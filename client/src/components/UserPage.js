@@ -9,7 +9,7 @@ export default class UserPage extends Component {
   state = {
     events: [],
     user: this.props.loggedInUser,
-    myJoin: this.props.join
+    join: this.props.join
   }
 
   getData = () => {
@@ -25,12 +25,11 @@ export default class UserPage extends Component {
           return (event.creator === user._id) 
           
           // return ((event.creator === user.id) || EventDetails.state.join)
-       
        })
-     
-
+    
         this.setState({
-          events: filterEvents
+          events: filterEvents,
+
         });
       })
       .catch((err) => console.log(err));
@@ -61,6 +60,7 @@ export default class UserPage extends Component {
         <div>
         <Link to='/' onClick={this.handleLogout}>Log Out</Link>
         </div>
+        
         
       </div>
     )

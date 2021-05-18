@@ -48,10 +48,10 @@ router.get('/:id', (req, res, next) => {
 });
 
 router.put('/:id', (req, res, next) => {
-  const { title, description, date, time } = req.body;
+  const { title, description, date, time, join } = req.body;
   Event.findByIdAndUpdate(
     req.params.id,
-    { title, description, date, time },
+    { title, description, date, time, join },
     { new: true }
   )
     .then(event => {
@@ -59,6 +59,7 @@ router.put('/:id', (req, res, next) => {
     })
     .catch(err => res.json(err));
 });
+
 
 
 router.delete('/:id', (req, res) => {
