@@ -31,10 +31,10 @@ export default class Events extends Component {
       <h2>Welcome to the Slackline Community</h2>
         {/* <AddEvent getData={this.getData} /> */}
         <div>
-        <Link to="/user-page">My Events</Link>
+        <Link to="/user-page" id="eventsLink">My Events </Link>
         </div>
         <div>
-        <Link to='/add-event'>Add Event</Link>
+        <Link to='/add-event' id="addEventLink">Add Event</Link>
         </div>
         <div>
         <h4>All Events:</h4>

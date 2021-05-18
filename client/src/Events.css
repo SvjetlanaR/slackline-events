@@ -1,0 +1,30 @@
+/* <div>
+      <h2>Welcome to the Slackline Community</h2>
+        {/* <AddEvent getData={this.getData} /> */}
+        /* <div>
+        <Link to="/user-page">My Events</Link>
+        </div>
+        <div>
+        <Link to='/add-event'>Add Event</Link>
+        </div>
+        <div>
+        <h4>All Events:</h4>
+        <EventList events={this.state.events} />
+        </div>
+        <div>
+        <Link to="/tree-protection">important! Tree Protection</Link>
+        </div>
+      </div> */
+
+
+h2 {
+  font-weight: bold;
+}
+
+#eventsLink {
+  font-weight: bold;
+}
+
+#addEventLink {
+  font-weight: bold;
+}
