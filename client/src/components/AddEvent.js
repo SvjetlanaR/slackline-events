@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./styles/AddEvent.css";
+import Navbar from './Navbar'; 
+import { Link } from 'react-router-dom';
 
 
 export default class AddEvent extends Component {
@@ -57,8 +60,10 @@ export default class AddEvent extends Component {
   
   render() {
     return (
-      <div>
-      <form onSubmit={this.handleSubmit}>
+      <div id="addEventMargin">
+      <Navbar/>
+      <div id="addForm">
+      <form onSubmit={this.handleSubmit} id="addEventForm">
         <label htmlFor="title">Title: </label>
         <input
           type="text"
@@ -95,7 +100,7 @@ export default class AddEvent extends Component {
           onChange={this.handleChange}
         />
         <br />
-        <label htmlFor="eqiupment">Eguipment: </label>
+        <label htmlFor="equipment">Equipment: </label>
         <input
           type="text"
           name="equipment"
@@ -142,6 +147,11 @@ export default class AddEvent extends Component {
      <br />
           <button type="submit">Create this project</button>
         </form>
+        </div>
+
+      <div>
+      <Link to='/' onClick={this.handleLogout} id="logOut">Log Out</Link>
+      </div>  
 
       </div>
     );

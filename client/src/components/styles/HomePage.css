@@ -1,0 +1,34 @@
+/* body {
+  background: url("https://images2.imgbox.com/ee/d0/lqO2y7W9_o.jpg") no-repeat center center fixed;
+  background-size: cover;
+} */
+
+
+
+#homepage-bg {
+  height: fill;
+  background: url("https://images2.imgbox.com/ee/d0/lqO2y7W9_o.jpg") no-repeat center center fixed;
+  background-size: cover;
+  /* background-blend-mode: lighten; */
+  background-color: rgba(255,255,255,1);
+}
+
+.homepage {
+  text-align: center;
+  height: 100%;
+}
+
+/* .homepage:before {
+  opacity: 0.5;
+} */
+
+h1 {
+  padding-top: 50px;
+  color: #1E6F5C;
+}
+
+#dontforget {
+  margin-top: 300px;
+  padding-bottom: 70px;
+  color: #E6DD3B;
+}

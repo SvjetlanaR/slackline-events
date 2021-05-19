@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { login } from "../services/auth";
 import { Link } from "react-router-dom";
+import "./styles/Login.css";
 
 export default class Login extends Component {
   state = {
@@ -37,7 +38,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div id="loginMargin">
         <h2>Login</h2>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="username">Username: </label>
@@ -48,7 +49,8 @@ export default class Login extends Component {
             value={this.state.username}
             onChange={this.handleChange}
           />
-          <label htmlFor="password">Password: </label>
+
+          <label htmlFor="password" id="pwLabel">Password: </label>
           <input
             id="password"
             type="password"
@@ -59,7 +61,7 @@ export default class Login extends Component {
           <button type="submit">Log in</button>
           {this.state.message && <h3>{this.state.message}</h3>}
           <div>
-          <button><Link to="/signup">Sign Up</Link></button>
+          <button><Link to="/signup" id="signupp">Sign Up</Link></button>
           </div>
         </form>
       </div>

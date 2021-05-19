@@ -1,0 +1,34 @@
+body {
+  background-color: #29BB89;
+  font-family: 'Poppins', sans-serif;
+}
+
+#addEventMargin {
+  margin: 0px 50px;
+}
+
+#addForm {
+  /* display: inline-block;
+  margin: auto;
+  text-align: left; */
+  /* text-align: center; */
+}
+
+#addEventForm {
+  width: 30%;
+  padding: 50px;
+  line-height: 130%;
+  background-color: #29BB89;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  background-color: #E6DD3B;
+  border: none;
+  padding: 7px 12px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+}

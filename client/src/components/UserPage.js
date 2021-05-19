@@ -4,6 +4,9 @@ import { logout } from '../services/auth';
 import axios from "axios";
 import EventList from "./EventList";
 // import EventDetails from "./EventDetails";
+import "./styles/UserPage.css";
+import Navbar from './Navbar'; 
+
 
 export default class UserPage extends Component {
   state = {
@@ -47,18 +50,16 @@ export default class UserPage extends Component {
 
   render() {
     return (
-      <div>
+      <div id="myEventsMargin">
+      <Navbar/>
         <h2>My Events</h2>
         <h3>List of my events</h3>
         <EventList events ={this.state.events}/>
         <div>
-        <Link to='/add-event'>Add Event</Link>
+        <Link to='/add-event' id="addEventLink">Add Event</Link>
         </div>
         <div>
-        <Link to="/events">Home Page</Link>
-        </div>
-        <div>
-        <Link to='/' onClick={this.handleLogout}>Log Out</Link>
+        <Link to='/' onClick={this.handleLogout} id="logOut">Log Out</Link>
         </div>
         
         

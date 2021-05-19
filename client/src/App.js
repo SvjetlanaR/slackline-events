@@ -10,6 +10,7 @@ import EventDetails from "./components/EventDetails";
 import TreeProtection from "./components/TreeProtection";
 import UserPage from "./components/UserPage";
 
+
 class App extends React.Component {
   state = {
     user: this.props.user,
@@ -21,7 +22,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="margin">
         <Switch>
 
         <Route exact path='/' component={HomePage} />

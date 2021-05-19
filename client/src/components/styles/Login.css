@@ -1,0 +1,19 @@
+#loginMargin {
+  margin: 50px 50px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+#pwLabel {
+  margin-left: 10px;
+}
+
+#signupp {
+  background-color: #29BB89;
+  color: black;
+  border: none;
+  padding: 15px 15px;
+  margin-top: 50px;
+}

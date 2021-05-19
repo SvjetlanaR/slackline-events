@@ -1,0 +1,41 @@
+nav {
+  margin-top: 50px;
+  text-decoration: none;
+  color: #E6DD3B; 
+  font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #289672;
+}
+
+Link:link {
+  color: #E6DD3B;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #E6DD3B;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+nav:hover {
+  color: #E6DD3B;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+nav:active {
+  color: #E6DD3B;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+
+Link {
+  color: #E6DD3B;
+  text-decoration: none;
+}
