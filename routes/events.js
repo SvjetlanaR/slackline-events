@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Event = require("../models/Event");
 
 router.post("/", (req, res, next) => {
-  const { title, date, description, equipment, time, duration, location, counter, userEmail, join} =
+  const { title, date, description, equipment, time, duration, location, counter, userEmail, join } =
     req.body;
     console.log('foobar', req.user);
     
@@ -48,10 +48,10 @@ router.get('/:id', (req, res, next) => {
 });
 
 router.put('/:id', (req, res, next) => {
-  const { title, description, date, time, join } = req.body;
+  const { title, description, date, time } = req.body;
   Event.findByIdAndUpdate(
     req.params.id,
-    { title, description, date, time, join },
+    { title, description, date, time },
     { new: true }
   )
     .then(event => {
@@ -60,6 +60,32 @@ router.put('/:id', (req, res, next) => {
     .catch(err => res.json(err));
 });
 
+
+router.post('/join', (req,res) => {
+  console.log(req.body);
+  Event.findByIdAndUpdate(
+    req.body.event,
+    { $push: { join: req.body.userId } },
+    { new: true }
+  )
+    .then(event => {
+      res.status(200).json(event);
+    })
+    .catch(err => res.json(err));
+});
+
+router.post('/joined', (req,res) => {
+  console.log(req.body);
+  Event.findByIdAndUpdate(
+    req.body.event,
+    { $pull: { join: req.body.userId } },
+    { new: true }
+  )
+    .then(event => {
+      res.status(200).json(event);
+    })
+    .catch(err => res.json(err));
+});
 
 
 router.delete('/:id', (req, res) => {

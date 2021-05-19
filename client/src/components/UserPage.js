@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { logout } from '../services/auth';
 import axios from "axios";
 import EventList from "./EventList";
-// import EventDetails from "./EventDetails";
+import Navbar from './Navbar';
 
 export default class UserPage extends Component {
   state = {
@@ -48,19 +48,13 @@ export default class UserPage extends Component {
   render() {
     return (
       <div>
+      <Navbar />
         <h2>My Events</h2>
         <h3>List of my events</h3>
         <EventList events ={this.state.events}/>
         <div>
         <Link to='/add-event'>Add Event</Link>
         </div>
-        <div>
-        <Link to="/events">Home Page</Link>
-        </div>
-        <div>
-        <Link to='/' onClick={this.handleLogout}>Log Out</Link>
-        </div>
-        
         
       </div>
     )
