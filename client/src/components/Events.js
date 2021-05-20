@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import EventList from "./EventList";
 import { Link } from 'react-router-dom';
-// import AddEvent from "./AddEvent";
 import { logout } from '../services/auth';
 import ReactPlayer from 'react-player';
+import Navbar from './Navbar';
 
 export default class Events extends Component {
   state = {
@@ -36,15 +36,16 @@ export default class Events extends Component {
   render() {
     return (
       <div>
+      <Navbar />
       <h2>Welcome to the Slackline Community</h2>
         {/* <AddEvent getData={this.getData} /> */}
         <div>
-        <Link to="/user-page" id="eventsLink">My Events </Link>
+        {/* <Link to="/user-page" id="eventsLink">My Events </Link>
         </div>
         <div>
         <Link to='/add-event' id="addEventLink">Add Event</Link>
-        </div>
-        <div>
+        </div> */}
+        {/* <div> */}
         <h4>All Events:</h4>
         
         <EventList events={this.state.events} />

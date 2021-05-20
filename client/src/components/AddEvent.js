@@ -70,9 +70,10 @@ export default class AddEvent extends Component {
         <br />
          <label htmlFor="date">Date: </label>
         <input
-          type="text"
+          type="date"
           name="date"
           id="date"
+        placeholder="dd-mm-yyyy"
           value={this.state.date}
           onChange={this.handleChange}
         />
@@ -88,7 +89,7 @@ export default class AddEvent extends Component {
         <br />
         <label htmlFor="description">Description: </label>
         <input
-          type="text"
+          type="textarea"
           name="description"
           id="description"
           value={this.state.description}
