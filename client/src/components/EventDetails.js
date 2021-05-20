@@ -90,6 +90,10 @@ join = () => {
       join: !this.state.join
   })
   })
+  .then(response => {
+    console.log(response)
+  
+  })
   .catch(err => console.log(err));
 }
 
