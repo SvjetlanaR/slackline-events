@@ -11,7 +11,8 @@ const eventSchema = new Schema({
   location: String,
   counter: Number,
   userEmail: String,
-  // join: { type: Boolean, default: false}
+  // join: { type: Boolean, default: false},
+  join:[{type:Schema.Types.ObjectId, ref:'User'}],
   // join: Number
 });
 

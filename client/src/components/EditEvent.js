@@ -24,7 +24,7 @@ export default class EditEvent extends Component {
           />
           <label htmlFor="date">Date: </label>
           <input
-            type="text"
+            type="date"
             id="date"
             name="date"
             value={this.props.date}
