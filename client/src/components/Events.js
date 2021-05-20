@@ -46,7 +46,7 @@ export default class Events extends Component {
         <div>
         <h4 id="allEvents">All Events:</h4>
         
-        <EventList events={this.state.events} />
+        <EventList events={this.state.events} id="eventList"/>
 
         </div>
         <br></br>

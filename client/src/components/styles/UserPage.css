@@ -1,3 +1,9 @@
+#eventList {
+  color: #289672;
+  text-decoration: none;
+  font-size: smaller;
+}
+
 #myEventsMargin {
   margin: 0px 50px;
 }

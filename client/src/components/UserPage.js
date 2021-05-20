@@ -54,7 +54,7 @@ export default class UserPage extends Component {
       <Navbar/>
         <h2>My Events</h2>
         <h3>List of my events</h3>
-        <EventList events ={this.state.events}/>
+        <EventList events ={this.state.events} id="eventList"/>
         <div>
         <Link to='/add-event' id="addEventLink">Add Event</Link>
         </div>

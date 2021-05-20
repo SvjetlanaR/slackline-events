@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import EditEvent from './EditEvent';
 import Navbar from './Navbar'; 
+import "./styles/EventDetails.css";
 
 
 export default class EventDetails extends Component {
@@ -108,7 +109,7 @@ componentDidMount() {
     console.log(this.props.loggedInUser)
     console.log(this.state.event.creator)
     return (
-      <div>
+      <div id="detailsMargin">
       <Navbar/>
         <h2>Title: {this.state.event.title} </h2>
         <p>Date: {this.state.event.date} </p>
@@ -120,13 +121,13 @@ componentDidMount() {
         <p>Attending: { this.state.event.join.length} person</p>
         
         
-        <button onClick={this.join}>{this.state.join ? 'join' : 'joined'}</button>
+        <button onClick={this.join} id="detailsButton">{this.state.join ? 'join' : 'joined'}</button>
         {/* <button onClick={this.join}>Join</button>
         <button onClick={this.joined}>Joined</button>
         */}
 
-        {this.props.loggedInUser._id === this.state.event.creator && (<button onClick={this.deleteEvent}>Delete</button>)}
-        {this.props.loggedInUser._id === this.state.event.creator && (<button onClick={this.toggleEditForm}>Show Edit Form</button>)}
+        {this.props.loggedInUser._id === this.state.event.creator && (<button onClick={this.deleteEvent} id="detailsButton">Delete</button>)}
+        {this.props.loggedInUser._id === this.state.event.creator && (<button onClick={this.toggleEditForm} id="detailsButton">Show Edit Form</button>)}
         {this.state.editForm && (
           <EditEvent
             {...this.state}

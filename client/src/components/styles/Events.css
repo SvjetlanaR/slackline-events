@@ -8,6 +8,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
 
+#eventList {
+  color: #289672;
+  text-decoration: none;
+  font-size: smaller;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
