@@ -1,0 +1,13 @@
+#protectionvideo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#protect {
+  color: #1E6F5C;
+  margin: 0px 50px;
+}
+
+ul {
+  color: #289672;
+}

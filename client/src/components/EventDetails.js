@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import EditEvent from './EditEvent';
-import Navbar from './Navbar';
+import Navbar from './Navbar'; 
+
 
 export default class EventDetails extends Component {
 
@@ -108,7 +109,7 @@ componentDidMount() {
     console.log(this.state.event.creator)
     return (
       <div>
-      <Navbar />
+      <Navbar/>
         <h2>Title: {this.state.event.title} </h2>
         <p>Date: {this.state.event.date} </p>
         <p>Time: {this.state.event.time} </p>

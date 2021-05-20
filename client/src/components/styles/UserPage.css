@@ -1,0 +1,34 @@
+#myEventsMargin {
+  margin: 0px 50px;
+}
+
+body {
+  font-family: 'Poppins';
+}
+
+h2 {
+  font-weight: bold;
+  color: #1E6F5C;
+}
+
+h3 {
+  font-weight: bold;
+  color: #289672;
+}
+
+#addEventLink {
+  font-weight: light;
+  color: #E6DD3B;
+}
+
+#homePage {
+  font-weight: light;
+  color: #289672;
+}
+
+#logOut {
+  color: #289672;
+  position: absolute;
+    top: 15;
+    right: 15;
+}

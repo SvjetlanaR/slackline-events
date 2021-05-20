@@ -1,0 +1,55 @@
+/*
+#1E6F5C
+#289672
+#29BB89
+#E6DD3B
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 15px;
+}
+
+#eventsMargin {
+  margin: 0px 50px;
+}
+
+h2 {
+  font-weight: bold;
+  color: #1E6F5C;
+}
+
+#myEventsLink {
+  font-weight: light;
+  color: #289672;
+}
+
+#addEventLink {
+  font-weight: light;
+  color: #E6DD3B;
+}
+
+#allEvents {
+  color: #289672;
+}
+
+#treeProtection {
+  color: #E6DD3B;
+}
+
+#logOut {
+  color: #289672;
+  position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#video {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

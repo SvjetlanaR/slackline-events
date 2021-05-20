@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { signup } from "../services/auth";
+import "./styles/Signup.css";
 
 export default class Signup extends Component {
   state = {
@@ -35,7 +36,7 @@ export default class Signup extends Component {
 
   render() {
     return (
-      <div>
+      <div id="signupMargin">
         <h2>Signup</h2>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="username">Username: </label>
@@ -46,7 +47,7 @@ export default class Signup extends Component {
             value={this.state.username}
             onChange={this.handleChange}
           />
-          <label htmlFor="password">Password: </label>
+          <label htmlFor="password" id="pwLabell">Password: </label>
           <input
             id="password"
             type="password"
