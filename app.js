@@ -18,7 +18,7 @@ require("./config")(app);
 
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-const DB_URL = "mongodb://localhost/slackline-events";
+const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/slackline-events";
 
 app.use(
   session({
@@ -27,7 +27,7 @@ app.use(
     saveUninitialized: false,
     resave: true,
     store: MongoStore.create({
-      mongoUrl: DB_URL,
+      mongoUrl: MONGO_URI,
     }),
   })
 );
@@ -94,6 +94,15 @@ app.use("/api/events", events);
 
 const auth = require("./routes/auth");
 app.use("/api/auth", auth);
+
+// app.js
+const path = require('path');
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.use((req, res) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/client/build/index.html");
+});
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
