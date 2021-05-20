@@ -3,6 +3,7 @@ import axios from 'axios';
 import EditEvent from './EditEvent';
 import Navbar from './Navbar'; 
 import "./styles/EventDetails.css";
+import { Link } from 'react-router-dom';
 
 
 export default class EventDetails extends Component {
@@ -134,6 +135,11 @@ componentDidMount() {
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
           /> )}
+
+
+<div>
+      <Link to='/' onClick={this.handleLogout} id="logOut">Log Out</Link>
+      </div>
       </div>
     )
   }
